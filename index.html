@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Browser Dialer UI with jQuery Html and CSS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./assets/css/dialer.css">
+  <style>
+    #dialer {
+      font-family: Helvetica, sans-serif;
+      margin: 20px auto;
+      padding: 0;
+      width: 240px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="dialer">
+    <!-- Dialer input -->
+    <!-- Telephone input field -->
+    <input class="form-control form-control-alt" onkeypress="return isNumberKey(event)" style="height:40px; margin-right:30px;" type="text" id="dialer_input"
+    name="dialer_input" maxlength="10" placeholder="555-666-7777">
+
+<div class="keys mx-auto col-12">
+ <div class="key-row">
+     <button class="btn btn-circle btn-default" onclick="sendDigit('1')">1</button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('2')">
+         2
+         <span>A B C</span>
+     </button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('3')">
+         3
+         <span>D E F</span>
+     </button>
+ </div>
+ <div class="key-row">
+     <button class="btn btn-circle btn-default" onclick="sendDigit('4')">
+         4
+         <span>G H I</span>
+     </button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('5')">
+         5
+         <span>J K L</span>
+     </button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('6')">
+         6
+         <span>M N O</span>
+     </button>
+ </div>
+ <div class="key-row">
+     <button class="btn btn-circle btn-default" onclick="sendDigit('7')">
+         7
+         <span>P Q R S</span>
+     </button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('8')">
+         8
+         <span>T U V</span>
+     </button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('9')">
+         9
+         <span>W X Y Z</span>
+     </button>
+ </div>
+ <div class="key-row">
+     <button class="btn btn-circle btn-default" onclick="sendDigit('*')">*</button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('0')">0</button>
+     <button class="btn btn-circle btn-default" onclick="sendDigit('#')">#</button>
+ </div>
+ <div class="key-row">
+     <button class="btn btn-circle " data-toggle="tooltip" title="Call" data-animation="true" data-placement="top" style="background-color:rgb(18, 145, 18); color: white; border-color:rgb(18, 145, 18) ;" onclick="toggleCall()">
+         <i class="fa fa-fw fa-phone"
+            :class="[ onPhone ? 'fa-close': 'fa-phone' ]"></i>
+     </button>
+     <button class="btn btn-circle btn-default" v-if="onPhone" onclick="toggleMute" data-toggle="tooltip" title="Mute" data-animation="true" data-placement="top">
+         <i class="fa fa-fw fa-microphone "
+            :class="[ muted ? 'fa-microphone-slash': 'fa-microphone' ]"></i>
+     </button>
+     <button class="btn btn-circle btn-default" data-toggle="tooltip" title="Remove" data-animation="true" data-placement="top" onclick="removeDigit()"><div style="margin-top:-3px;">c</div></button>
+ </div>
+ <div class="key-row">
+     <button class="btn btn-circle btn-default" data-toggle="tooltip" title="Add to confrence" data-animation="true" data-placement="top"><i class="fa fa-users" aria-hidden="true" style="margin-top:-3px;"></i></button>
+ </div>
+ <div class="log"> call ended</div>
+</div>
+      
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="./assets/js/dialer.js"></script>
+  <script>
+      $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+  </script>
+</body>
+</html>

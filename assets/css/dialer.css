@@ -1,0 +1,137 @@
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus,
+button:focus, button:active, button:hover, label:focus, .btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+}
+
+.dropdown-menu li a {
+    padding: 3px 10px;
+}
+
+.btn-circle {
+    width: 49px;
+    height: 49px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: 2.00;
+    border-radius: 30px;
+    border-color: #ae4b84;
+    margin-left: 5px;
+    color: #ae4b84;
+}
+
+.controls, .keys {
+    padding-top: 10px;
+}
+
+.controls {
+    float: left;
+}
+
+.controls .btn {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.keys {
+    padding-left: 20px;
+    float: right;
+    text-align: center;
+    color: #fff;
+}
+
+.key-row {
+    margin-bottom: 20px;
+}
+
+.key-row .btn {
+    font-weight: 100;
+}
+
+.key-row .btn span {
+    display: block;
+    padding-top: 2px;
+    font-size: 10px;
+    color: #ae4b84;
+}
+
+.key-row .btn:hover {
+    background-color: #c77ea8;
+    color: #79345b;
+}
+
+.log {
+    background-color: #ddd;
+    clear: both;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #787878;
+}
+
+p {
+    font-size: 10px;
+    color: #787878;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.detail-form {
+    width: 80%;
+    margin-left: 10px;
+}
+
+.nav-main :hover {
+    background-color: #79345b;
+}
+
+.nav-main-link-name {
+    color: #fff;
+}
+
+.nav-main-link-name:hover {
+    color: #fff;
+    background-color: #612949;
+}
+
+.nav-main-link :hover {
+    background-color: #612949;
+}
+
+.title-bar {
+    background-color: #ae4b84;
+    margin-top: -20px;
+    height: 35px;
+}
+
+@media only screen and (max-width: 570px) {
+    #btn-accept {
+        margin-bottom: 3px;
+    }
+
+    #btn-reject {
+        margin-bottom: 3px;
+    }
+
+    #btn-add-conf {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #btn-accept {
+        margin-left: -15px;
+    }
+
+    #btn-reject {
+        margin-left: -10px;
+    }
+
+    #btn-add-conf {
+        margin-left: -30px;
+    }
+}
